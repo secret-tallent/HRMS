@@ -1,0 +1,73 @@
+﻿<style>
+    .table-striped tbody tr:hover {
+        cursor: pointer;
+    }
+</style>
+<form id="frmTemplateColumns">
+    <div ng-if="Message" class="alert alert-success text-center"><strong>{{Message}}</strong></div>
+    <table class="table">
+        <tr>
+            <td>
+                <table class="table">
+                    <tr>
+                        <td style="width:144px; vertical-align:middle">
+                            <strong>Select Template</strong>
+                        </td>
+                        <td>
+                            <select name="cmbTemplates" ng-change="updateColumns()" ng-model="item">
+                                <option ng-repeat="template in Templates" value="{{template.Id}}">
+                                    {{template.Name}}
+                                </option>
+                            </select>
+                        </td>
+                        <td>
+                            <a href="#/templateCreate" style="float:right">New Template</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr ng-if="UITemplates">
+            <td>
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="table-inverse">
+                            <th>ColumnName</th>
+                            <th>Mandatory</th>
+                            <th>Included</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" ng-repeat="Column in UITemplates.TemplateColumns">
+                            <td>
+                                <input type="hidden" ng-model="Column.Id" />
+                                <span>
+                                    {{Column.ColumnDisplayName}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    <input type="checkbox" ng-model="Column.Mandatory">
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    <input type="checkbox" ng-model="Column.Included">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="btn-group">
+                                <input type="button" id="save" value="Save" ng-click="save()" class="btn btn-default" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</form>

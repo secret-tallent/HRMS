@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "description": "Utilities Class Library",
+  "authors": [ "muhammad.ramzan" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.configuration": "4.0.0.0"
+      }
+    }
+  }
+}

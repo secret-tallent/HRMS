@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0-*",
+  "description": "DataServiceRelay Class Library",
+  "authors": [ "muhammad.ramzan" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.configuration": "4.0.0.0",
+        "System.Data": "4.0.0.0",
+        "System.Transactions": "4.0.0.0"
+      }
+    }
+  },
+  "dependencies": {
+    "Dapper": "1.50.2",
+    "Utilities": "1.0.0-*"
+  }
+}
