@@ -1,4 +1,4 @@
-# BiolerPlate
+# Biolerplate
 
 Boilerplate to start with Command and Query Design Pattern, Angular JS and DNX 
 
